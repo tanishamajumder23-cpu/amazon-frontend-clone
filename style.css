@@ -1,0 +1,390 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/*@import says that we are bringing something from outside url(...) → This is the location of the font file. and : wght=100..900 → All font thickness levels (thin → bold).*/
+/*this entire part means that we are telling css to download the Outfit font from Google and make it available for my website*/
+*{/*star means that apply this to ev everything, all html elements, every single one of them.*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;/*2 types of box sizing are there, one is 'box-sizing: "content box' that means if you give the width extra, the width is added additionally and hence the overall width increases, but in case of box-sizing: "content-box;" you will get that padding fitted  inside that give width no extra*/
+    /*width+padding in content-box box-sizing and width adjusted with padding in the border-box*/
+    font-family: Outfit;
+    /*these properties are applicable to all the html elements*/
+
+}
+body{
+    background: #dadada;
+}
+a{/*a is for anchor tag that is used for links: by default the links are blue and underlined, here we are removing the underline cause put text decoration is none and for that colour we say that don't use default blue but use whatever colour the parent element has*/
+    text-decoration: none;
+    color: inherit;
+}
+nav{/*styling the navigation bar and its elements*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #131921;/*for background colour*/
+    padding: 10px 20px;/*top and bottom padding is 10 px and left and right padding is 20 px*/
+    color: white;/*for text colour*/
+}
+/*
+.experiment1{ ---> styling that div of my experiment1 div that i created, with these features.
+
+    background: red;
+    color: white;
+    padding: 20px;
+}
+    also multiline commenting isn't allowed
+*/
+/*
+.experiment2{
+    background: blue;
+    color:white;
+    padding:90px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}*/
+.nav-location{/*dot is because its a class name*/
+    display: flex;
+    align-items: end;
+    margin-left: 15px;
+    font-size: 10px;
+    color: #c4c4c4;
+}
+.nav-location{
+    display: flex;
+    align-items: center;
+}
+.nav-location h1{
+    color: #fff;
+    font-size: 14px;
+}
+h1{
+    font-size: 10px;
+}
+.nav-search{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: gray;
+    max-width: 1000px;
+    border-radius: 4px;
+    margin-left: 15px;
+    /*used to customise the search part*/
+}
+.nav-search-category{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 5px;
+    background: #e5e5e5;
+    border-radius: 4px 0 0 4px;/*gray colour cox and then the all and the drop down button alignedn at the left side of the search amazon bar*/
+}
+.nav-search-input{
+    border: none;
+    outline: none;
+    padding-left: 200px;
+    width: 100%;
+}
+.nav-search-icon{
+    max-width: 41px;
+    padding: 8px;
+    background: #ffd6ff;
+    border-radius: 0 4px 4px 0;
+
+
+}
+.nav-language{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-weight: 600;
+    margin-left: 15px;
+
+}
+.nav-text{
+    margin-left: 15px;
+}
+.nav-text p{
+    font-size: 10px;
+}
+.nav-text h1{
+    font-size: 14px;
+}
+.nav-cart{
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+}
+.nav-bottom{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 20px;
+    background: #232F3E;
+    color:white;
+    font-size:15px;
+/*"Arrange all direct children of nav-bottom in a row"
+
+So if later you add:
+
+All
+
+Fresh
+
+MX Player
+
+Sell
+
+Amazon Pay
+They will sit side by side like a menu bar.
+
+Without flex, they would stack vertically.
+
+🎯 What Is .nav-bottom div Doing?
+
+This means:
+
+👉 "For every div inside nav-bottom, apply this styling"
+
+So that inner div (which has icon + text):
+
+<div>
+    <img>
+    <p>All</p>
+</div>
+What is this?
+
+is being told:
+
+display: flex;
+
+So the image and the word "All" sit side by side.
+
+Without this, they'd be one below the other.
+
+💡 So Basically
+Selector	Affects	Why
+.nav-bottom	The big menu bar	Makes all menu items horizontal
+.nav-bottom div	Each menu item	Makes icon + text horizontal
+
+You are using flex TWO TIMES.
+
+One for outer layout.
+One for inner layout.
+
+That’s very common in real websites.
+
+What Is display: flex Actually?
+
+Flex means:
+
+"Put children in a row (by default) and allow easy alignment."
+
+Normal div behavior:
+
+Item 1
+Item 2
+Item 3
+
+With flex:
+
+Item 1   Item 2   Item 3
+What Is align-items: center?
+
+That controls vertical alignment.
+
+*/
+}
+.nav-bottom div{
+    display: flex;
+    align-items:center;
+    gap:5px;
+    font-weight:500;
+
+}
+/*
+align-items only works when:
+
+display: flex;
+
+Without flex → it does nothing.
+
+👉 align-items controls vertical alignment (in flex)
+
+Imagine this:
+
+.parent {
+    display: flex;
+}
+
+By default, flex puts items in a row.
+
+Like:
+
+Item1   Item2   Item3
+
+But vertically, they may not align properly.
+
+
+and!!
+
+🔥 align-items Options
+1️⃣ align-items: flex-start;
+
+Align to top
+
+📷
+Text
+2️⃣ align-items: center;
+
+Align in middle
+
+📷 Text
+3️⃣ align-items: flex-end;
+
+Align to bottom
+
+     📷
+Text
+*/
+.header-slider ul{
+    display:flex;
+    overflow-y: hidden;
+}
+/*side by side placing and then also scroll side by side images transition*/
+.header-img{
+    max-width:100%;
+    mask-image: linear-gradient(to bottom, #000000 50%, transparent 100%)
+}
+.header-slider a{
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    padding: 5vh 1vw;
+    background: #ffffff4f;
+    color:#0000007b;
+    text-decoration: none;/*liks normally have a underline, this will remove the underline*/
+    font-weight:600;
+    font-size:18px;
+    cursor:pointer;
+}
+.control_next{
+    right: 0;
+
+}
+.box-row{
+    display: flex;
+    flex-wrap: wrap;/*cards move to the next line if no more space is left in that same line. 
+    That’s why here, the cards move to next row.*/
+    row-gap: 20px;/*adds vertical space between rows*/
+    justify-content: space-between;
+    margin: 20px 30px;
+}
+.box-col{
+    display: flex;
+    flex-direction: column;/*by default it's all placed 
+    horizontally side by side*/
+    gap:10px;
+    padding:15px 20px;
+    background: white;
+    max-width:24%;
+    min-height: 200px;
+    z-index:1;
+/*cards are added horizontally side by side on the homepage*/
+}
+.box-col a{
+    font-size: 13px;
+    color: #009999;
+    font-weight:500;
+}
+.header-box{
+    margin-top:20px;
+}
+.product-slider{
+    background: white;
+    margin: 0 30px;
+    padding: 20px;
+    margin-bottom: 15px;
+
+}
+.product-slider .products{
+    display:flex;/* flex puts the items side by side*/
+    overflow-x: auto;/*If items become wider than the container, 
+    allow horizontal scrolling. so the browser says Content is bigger 
+    than the container → allow sideways scroll.*/
+    gap:20px;/*This adds space between flex items. without gap 
+    it'd appear all side by side*/
+    margin-top: 10px;
+}
+
+.product-slider .products img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.product-slider .products::-webkit-scrollbar{
+    display: none;
+}
+.product-slider-with-price{
+    background: white;
+    margin: 0 30px;
+    padding: 20px;
+    margin-bottom:15px;
+
+}
+.product-slider-with-price .products{
+    display:flex;
+    overflow-x: auto;
+    gap:10px;
+    margin-top:10px;
+}
+.product-card{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    min-width:210px;
+    background:#fbfbfb;
+}
+.product-card img{
+    width:110px;
+    margin: 0 50px;
+}
+.product-slider-with-price .products::-webkit-scrollbar{
+    display: none;
+}
+.product-offer p{
+    background: #be0b3b;
+    color:#fff;
+    display:inline-block;
+    padding: 2px 5px;
+    border-radius: 2px;
+    margin: 8px 0;
+    font-size: 13px;
+}
+.product-offer span{
+    color: #be0b3b;
+    font-weight: 500;
+    font-size: 12px;
+
+}
+.product-price{
+    color: gray;
+    font-size: 13px;
+}
+.product-card h4{
+    color:#525252;
+    font-size: 15px;
+    font-weight: 400;
+}
+footer{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    color: #fff;
+    background: #131921;
+    padding: 20px 60px;
+}

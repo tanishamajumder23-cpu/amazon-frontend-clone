@@ -1,0 +1,124 @@
+body{
+    background:white;/*sets the background color of the whole webpage*/
+}
+
+.breadcrum{
+    padding: 10px 20px;/*10 px from top and bottom and 20px left and right side*/
+    font-size:12px;/*makes breadcrumb text small*/
+    color: #565656;/*grey color similar to Amazon breadcrumb text*/
+}
+
+.product-display{
+    min-height: 100%;/*ensures the container takes at least full height*/
+    padding: 10px 20px;/*space inside the container*/
+    display: flex;/*flex makes the image section, details section and purchase section appear side by side*/
+}
+
+.product-d-image{
+    display:flex; /*product's icon left side and name right side*/
+    gap: 10px;/*space between thumbnails and main image*/
+}
+
+.product-icons{
+    display:flex;
+    flex-direction: column;/*makes the small images stack vertically*/
+    gap:10px;/*space between the small images*/
+}
+
+.product-icons img{
+    border: 1px solid gray;/*adds grey border around each thumbnail*/
+    border-radius: 10px;/*rounds the corners slightly*/
+    padding:5px;/*space between image and border*/
+}
+
+.product-d-details{
+    margin: 0px 30px;/*adds spacing left and right of product details section*/
+}
+
+.product-title{
+    font-size: 25px;/*large font for product title*/
+}
+
+.brand-store{
+    margin-top: 5px;/*small space above brand name*/
+    color:#007185;/*amazon blue color for clickable store link*/
+    font-size: 14px;/*smaller than title*/
+}
+
+.product-rating{
+    display: flex;
+    flex-direction:column;/*rating text arranged vertically*/
+    gap: 10px;/*space between rating elements*/
+}
+
+.product-rating div{
+    display: flex;
+    align-items: center;/*align stars and rating number properly*/
+    gap:10px;
+}
+
+.product-rating p{
+    color: #007185;/*amazon blue color for rating link*/
+}
+
+.product-rating p span{
+    color:white;/*text color inside best seller badge*/
+    background: #c73500;/*orange/red badge background*/
+    padding: 2px 5px;/*space inside badge*/
+    border-radius: 3px;/*slightly rounded badge*/
+    font-size: 14px;
+}
+
+.product-rating h5{
+    font-weight:400;/*lighter weight for "bought in past month" text*/
+}
+
+/*price section styling*/
+.product-price{
+    display:flex;/*price elements arranged using flexbox*/
+    flex-direction:column;/*price elements stacked vertically*/
+    gap:5px;/*small space between each line*/
+}
+
+/*discount % and price row*/
+.product-price div{
+    display:flex;
+    align-items:center;/*align discount percentage and price horizontally*/
+    gap:10px;
+    margin:10px 0;/*space above and below price row*/
+}
+
+/*discount percentage*/
+.product-price div p{
+    font-size:20px;/*discount percentage size*/
+    color:#c73500;/*amazon discount red color*/
+}
+
+/*main price*/
+.product-price div h1{
+    font-size:30px;/*large price text*/
+    font-weight:400;/*lighter bold style*/
+}
+
+/*list price text*/
+.product-price h5{
+    color:#565656;/*grey color similar to Amazon*/
+    font-weight:400;/*lighter text*/
+}
+
+/*strike-through original price*/
+.product-price h5 span{
+    text-decoration:line-through;/*draws a line through original price*/
+}
+
+/*amazon style blue links like Prime*/
+.product-price p span{
+    color:#007185;/*Amazon blue for clickable links*/
+    font-size:14px;
+}
+
+/*horizontal divider line like Amazon*/
+.product-d-details hr{
+    border:none;/*removes default hr styling*/
+    border-top:1px solid #ccc;/*adds light grey divider line like Amazon*/
+}
