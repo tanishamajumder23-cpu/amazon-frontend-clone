@@ -1,124 +1,261 @@
 body{
-    background:white;/*sets the background color of the whole webpage*/
+background:white;
+font-family: Arial, Helvetica, sans-serif;
 }
 
+/* breadcrumb */
 .breadcrum{
-    padding: 10px 20px;/*10 px from top and bottom and 20px left and right side*/
-    font-size:12px;/*makes breadcrumb text small*/
-    color: #565656;/*grey color similar to Amazon breadcrumb text*/
+padding:10px 20px;
+font-size:12px;
+color:#565656;
 }
 
+
+/* main layout */
 .product-display{
-    min-height: 100%;/*ensures the container takes at least full height*/
-    padding: 10px 20px;/*space inside the container*/
-    display: flex;/*flex makes the image section, details section and purchase section appear side by side*/
+min-height:100%;
+padding:10px 20px;
+display:flex;
+gap:30px;
+align-items:flex-start;
 }
 
+
+/* product images */
 .product-d-image{
-    display:flex; /*product's icon left side and name right side*/
-    gap: 10px;/*space between thumbnails and main image*/
+display:flex;
+gap:10px;
 }
 
 .product-icons{
-    display:flex;
-    flex-direction: column;/*makes the small images stack vertically*/
-    gap:10px;/*space between the small images*/
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
 .product-icons img{
-    border: 1px solid gray;/*adds grey border around each thumbnail*/
-    border-radius: 10px;/*rounds the corners slightly*/
-    padding:5px;/*space between image and border*/
+border:1px solid gray;
+border-radius:10px;
+padding:5px;
+cursor:pointer;
 }
 
+
+/* middle product details */
 .product-d-details{
-    margin: 0px 30px;/*adds spacing left and right of product details section*/
+margin:0 30px;
+max-width:600px;
 }
 
 .product-title{
-    font-size: 25px;/*large font for product title*/
+font-size:25px;
+line-height:32px;
 }
 
 .brand-store{
-    margin-top: 5px;/*small space above brand name*/
-    color:#007185;/*amazon blue color for clickable store link*/
-    font-size: 14px;/*smaller than title*/
+margin-top:5px;
+color:#007185;
+font-size:14px;
 }
 
+
+/* rating section */
 .product-rating{
-    display: flex;
-    flex-direction:column;/*rating text arranged vertically*/
-    gap: 10px;/*space between rating elements*/
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
 .product-rating div{
-    display: flex;
-    align-items: center;/*align stars and rating number properly*/
-    gap:10px;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .product-rating p{
-    color: #007185;/*amazon blue color for rating link*/
+color:#007185;
 }
 
 .product-rating p span{
-    color:white;/*text color inside best seller badge*/
-    background: #c73500;/*orange/red badge background*/
-    padding: 2px 5px;/*space inside badge*/
-    border-radius: 3px;/*slightly rounded badge*/
-    font-size: 14px;
+color:white;
+background:#c73500;
+padding:2px 5px;
+border-radius:3px;
+font-size:14px;
 }
 
-.product-rating h5{
-    font-weight:400;/*lighter weight for "bought in past month" text*/
-}
 
-/*price section styling*/
+/* price section */
 .product-price{
-    display:flex;/*price elements arranged using flexbox*/
-    flex-direction:column;/*price elements stacked vertically*/
-    gap:5px;/*small space between each line*/
+display:flex;
+flex-direction:column;
+gap:5px;
 }
 
-/*discount % and price row*/
 .product-price div{
-    display:flex;
-    align-items:center;/*align discount percentage and price horizontally*/
-    gap:10px;
-    margin:10px 0;/*space above and below price row*/
+display:flex;
+align-items:center;
+gap:10px;
+margin:10px 0;
 }
 
-/*discount percentage*/
 .product-price div p{
-    font-size:20px;/*discount percentage size*/
-    color:#c73500;/*amazon discount red color*/
+font-size:20px;
+color:#c73500;
 }
 
-/*main price*/
 .product-price div h1{
-    font-size:30px;/*large price text*/
-    font-weight:400;/*lighter bold style*/
+font-size:30px;
+font-weight:400;
 }
 
-/*list price text*/
 .product-price h5{
-    color:#565656;/*grey color similar to Amazon*/
-    font-weight:400;/*lighter text*/
+color:#565656;
+font-weight:400;
 }
 
-/*strike-through original price*/
 .product-price h5 span{
-    text-decoration:line-through;/*draws a line through original price*/
+text-decoration:line-through;
 }
 
-/*amazon style blue links like Prime*/
 .product-price p span{
-    color:#007185;/*Amazon blue for clickable links*/
-    font-size:14px;
+color:#007185;
+font-size:14px;
 }
 
-/*horizontal divider line like Amazon*/
+
+/* divider line */
 .product-d-details hr{
-    border:none;/*removes default hr styling*/
-    border-top:1px solid #ccc;/*adds light grey divider line like Amazon*/
+border:none;
+border-top:1px solid #ccc;
+margin:20px 0;
+}
+
+
+/* color options */
+.product-color-selection{
+margin:20px 0;
+}
+
+.product-color-options{
+display:flex;
+gap:10px;
+margin-top:10px;
+flex-wrap:wrap;
+}
+
+.option{
+display:flex;
+align-items:center;
+padding:8px 12px;
+border:1px solid #cbcbcb;
+gap:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+
+/* product info grid */
+.product-info{
+display:grid;
+grid-template-columns:150px auto;
+gap:8px;
+max-width:400px;
+margin:20px 0;
+}
+
+
+/* description */
+.product-description{
+margin:20px 0;
+}
+
+.product-description ul{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-left:30px;
+}
+
+
+/* purchase box */
+.product-d-purchase{
+width:100%;
+max-width:280px;
+border:1px solid #c1c1c1;
+border-radius:10px;
+padding:20px;
+height:fit-content;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.product-d-purchase .title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.product-d-purchase .price{
+font-size:26px;
+margin:10px 0;
+}
+
+.product-d-purchase .gap{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+
+/* delivery location */
+.delivery-location{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:14px;
+color:#007185;
+cursor:pointer;
+}
+
+
+/* stock text */
+.product-stock{
+color:#007600;
+font-size:20px;
+font-weight:500;
+}
+
+
+/* quantity dropdown */
+.product-quantity{
+padding:5px;
+border-radius:5px;
+border:1px solid #ccc;
+width:100px;
+}
+
+
+/* buttons */
+.btn{
+background:#ffd814;
+border:none;
+padding:10px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+margin-top:10px;
+}
+
+.btn:hover{
+background:#f7ca00;
+}
+
+.product-buy{
+background:#ffa41c;
+}
+
+.product-buy:hover{
+background:#fa8900;
 }

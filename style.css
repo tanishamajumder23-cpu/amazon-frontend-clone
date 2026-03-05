@@ -388,3 +388,7 @@ footer{
     background: #131921;
     padding: 20px 60px;
 }
+.product-d-details{
+    margin: 0px 30px;
+    max-width: 500px;
+}

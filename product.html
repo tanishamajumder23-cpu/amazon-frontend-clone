@@ -2,188 +2,362 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"><!--defines the character encoding so browser understands all characters properly-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--makes the website responsive on different screen sizes like phones-->
-    <title>Product Page</title><!--this is the text that appears on the browser tab-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
 
-    <!--link tag connects this html file with external css files so styling can be applied-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="product.css">
+
 </head>
 
 <body>
 
-    <nav><!--nav bar has the navigation section that usually contains the logo,menu and the links that are extra-->
+<nav>
 
-        <!--amazon logo which also acts as a clickable link to go back to homepage-->
-        <a href="./index.html">
-            <img src="./assets/amazon_logo.png" width="100">
-        </a><!--make the logo clickable-->
+<a href="./index.html">
+<img src="./assets/amazon_logo.png" width="100">
+</a>
 
-        <!--delivery location section showing where the product will be delivered-->
-        <div class="nav-location">
-            <img src="./assets/location_icon.png" alt="" height="18">
+<div class="nav-location">
+<img src="./assets/location_icon.png" height="18">
 
-            <div class="location-text">
-                <p>Deliver to Tanisha</p><!--small text showing delivery message-->
-                <h1>United Kingdom</h1><!--main delivery location-->
-            </div>
+<div class="location-text">
+<p>Deliver to Tanisha</p>
+<h1>United Kingdom</h1>
+</div>
+</div>
 
-        </div>
+<div class="nav-search">
 
-        <!--search bar section where users can search for products-->
-        <div class="nav-search">
+<div class="nav-search-category">
+<p>All</p>
+<img src="./assets/dropdown_icon.png" height="12">
+</div>
 
-            <!--category dropdown which lets user select product category-->
-            <div class="nav-search-category">
-                <p>All</p>
-                <img src="./assets/dropdown_icon.png" height="12" alt="">
-            </div>
+<input type="text" class="nav-search-input" placeholder="Search Amazon">
 
-            <!--text input field where user types the search query-->
-            <input type="text" class="nav-search-input" placeholder="Search Amazon">
+<img src="./assets/search_icon.png" class="nav-search-icon">
 
-            <!--search icon button-->
-            <img src="./assets/search_icon.png" class="nav-search-icon" alt="">
+</div>
 
-        </div>
+<div class="nav-language">
+<img src="./assets/us_flag.png" width="25px">
+<p>EN</p>
+<img src="./assets/dropdown_icon.png" width="8px">
+</div>
 
-        <!--language selector section-->
-        <div class="nav-language">
-            <img src="./assets/us_flag.png" width="25px" alt=""><!--flag icon-->
-            <p>EN</p><!--language text-->
-            <img src="./assets/dropdown_icon.png" width="8px" alt=""><!--dropdown icon-->
-        </div>
+<div class="nav-text">
+<p>Hello, Sign in</p>
 
-        <!--account login section-->
-        <div class="nav-text">
-            <p>Hello, Sign in</p><!--small greeting text-->
-            <h1>
-                Account & Lists
-                <img src="./assets/dropdown_icon.png" width="8px" alt=""><!--dropdown icon-->
-            </h1>
-        </div>
+<h1>
+Account & Lists
+<img src="./assets/dropdown_icon.png" width="8px">
+</h1>
 
-        <!--orders and returns section-->
-        <div class="nav-text">
-            <p>Return</p>
-            <h1>& Orders</h1>
-        </div>
+</div>
 
-        <!--shopping cart section-->
-        <a href="" class="nav-cart">
-            <img src="./assets/cart_icon.png" width="35px" alt=""><!--cart icon-->
-            <h4>Cart</h4><!--cart label-->
-        </a>
+<div class="nav-text">
+<p>Return</p>
+<h1>& Orders</h1>
+</div>
 
-    </nav>
+<a href="" class="nav-cart">
+<img src="./assets/cart_icon.png" width="35px">
+<h4>Cart</h4>
+</a>
 
-    <!--secondary navigation bar below the main navbar-->
-    <div class="nav-bottom">
+</nav>
 
-        <div>
-            <img src="./assets/menu_icon.png" width="25px" alt="">
-            <p>All</p>
-        </div><!--all this written below are placed side by side coz we did flex-->
 
-        <!--quick navigation links-->
-        <p>Today's Deals</p>
-        <p>Customer Service</p>
-        <p>Registry</p>
-        <p>Gift Cards</p>
-        <p>Sell</p>
+<div class="nav-bottom">
 
-    </div>
+<div>
+<img src="./assets/menu_icon.png" width="25px">
+<p>All</p>
+</div>
 
-    <!--breadcrumb navigation which shows product category path-->
-    <p class="breadcrum">Video Games > PC > Accessories > Headset</p>
+<p>Today's Deals</p>
+<p>Customer Service</p>
+<p>Registry</p>
+<p>Gift Cards</p>
+<p>Sell</p>
 
-    <!--main container that holds the entire product layout-->
-    <div class="product-display">
+</div>
 
-        <!--left section containing product thumbnails and main image-->
-        <div class="product-d-image">
 
-            <!--small preview icons of the product (different angles or images)-->
-            <div class="product-icons">
-                <img src="./assets/product_img.jpg" alt="" width="60">
-                <img src="./assets/product_img.jpg" alt="" width="60">
-                <img src="./assets/product_img.jpg" alt="" width="60">
-                <img src="./assets/product_img.jpg" alt="" width="60">
-                <img src="./assets/product_img.jpg" alt="" width="60">
-            </div>
 
-            <!--main product image displayed larger-->
-            <div class="product-main-image">
-               <img src="./assets/product_img.jpg" alt="" width="400">
-            </div>
+<p class="breadcrum">
+Video Games > PC > Accessories > Headset
+</p>
 
-        </div>
 
-        <!--middle section containing product information-->
-        <div class="product-d-details">
 
-            <!--product title and description-->
-            <p class="product-title">
-                BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller, Noise Cancelling over Ear Headphones with Mic, LED Light, Bass Surround, Soft Memory Earmuffs(Blue)
-            </p>
+<div class="product-display">
 
-            <!--brand store link-->
-            <p class="brand-store">
-                Visit the BENGOO Store
-            </p>
 
-            <!--product rating section-->
-            <div class="product-rating">
+<div class="product-d-image">
 
-                <!--rating value and star image-->
-                <div>
-                    <div>4.3 <img src="./assets/rating_img.png" height="20px"></div>
-                </div>
+<div class="product-icons">
+<img src="./assets/product_img.jpg" width="60">
+<img src="./assets/product_img.jpg" width="60">
+<img src="./assets/product_img.jpg" width="60">
+<img src="./assets/product_img.jpg" width="60">
+<img src="./assets/product_img.jpg" width="60">
+</div>
 
-                <!--number of users who rated the product-->
-                <p>104,185 ratings | Search this page</p>
+<div class="product-main-image">
+<img src="./assets/product_img.jpg" width="400">
+</div>
 
-            </div>
+</div>
 
-            <!--best seller badge-->
-            <p><span>#Best Seller</span> in PC Game Headsets</p>
 
-            <!--number of people who purchased recently-->
-            <h5>10K+ bought in past month</h5>
 
-            <!--horizontal divider line separating sections-->
-            <hr>
+<div class="product-d-details">
 
-            <!--product price section used in tutorial-->
-            <div class="product-price">
+<p class="product-title">
+BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller,
+Noise Cancelling over Ear Headphones with Mic, LED Light,
+Bass Surround, Soft Memory Earmuffs (Blue)
+</p>
 
-                <div>
-                    <p>-35%</p>
-                    <h1>$<span>25</span>.99</h1>
-                </div>
+<p class="brand-store">
+Visit the BENGOO Store
+</p>
 
-                <h5>List Price: <span>$39.99</span></h5>
 
-                <p>Get <b>Fast, Free Shipping</b> with <span>Amazon Prime</span></p>
+<div class="product-rating">
 
-                <p><span>FREE Returns</span></p>
+<div>
+<div>4.3 <img src="./assets/rating_img.png" height="20px"></div>
+</div>
 
-                <p><span>Join Prime to buy this item at $22.99</span></p>
+<p>104,185 ratings | Search this page</p>
 
-                <p>Available at a lower price from <span>other sellers</span> that may not offer free Prime shipping.</p>
+</div>
 
-            </div>
+<p><span>#Best Seller</span> in PC Game Headsets</p>
 
-        </div>
+<h5>10K+ bought in past month</h5>
 
-        <!--right section containing purchase box-->
-        <div class="product-d-purchase">
+<hr>
 
-        </div>
 
-    </div>
+
+<div class="product-price">
+
+<div>
+<p>-35%</p>
+<h1>$<span>25</span>.99</h1>
+</div>
+
+<h5>List Price: <span>$39.99</span></h5>
+
+<p>Get <b>Fast, Free Shipping</b> with <span>Amazon Prime</span></p>
+
+<p><span>FREE Returns</span></p>
+
+<p><span>Join Prime to buy this item at $22.99</span></p>
+
+<p>
+Available at a lower price from <span>other sellers</span>
+that may not offer free Prime shipping.
+</p>
+
+</div>
+
+
+
+<div class="product-color-selection">
+
+<p>Colors Available:</p>
+
+<div class="product-color-options">
+
+<div class="option">
+<img src="./assets/product_img.jpg" width="30">
+<p>Black</p>
+</div>
+
+<div class="option">
+<img src="./assets/product_img.jpg" width="30">
+<p>Green</p>
+</div>
+
+<div class="option">
+<img src="./assets/product_img.jpg" width="30">
+<p>Pink</p>
+</div>
+
+<div class="option">
+<img src="./assets/product_img.jpg" width="30">
+<p>Blue</p>
+</div>
+
+<div class="option">
+<img src="./assets/product_img.jpg" width="30">
+<p>Red</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="product-info">
+
+<p><b>Brand</b></p>
+<p>BENGOO</p>
+
+<p><b>Model Name</b></p>
+<p>G9000</p>
+
+<p><b>Color</b></p>
+<p>Blue</p>
+
+<p><b>Form Factor</b></p>
+<p>Over Ear</p>
+
+<p><b>Connectivity Technology</b></p>
+<p>Wired</p>
+
+</div>
+
+
+<hr>
+
+
+<div class="product-description">
+
+<h1>About this item</h1>
+
+<ul>
+
+<li>Noise cancelling stereo sound</li>
+
+<li>Clear communication microphone</li>
+
+<li>LED lighting effects</li>
+
+<li>Wide compatibility across consoles</li>
+
+<li>Comfortable memory earmuffs</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="product-d-purchase">
+
+<div class="title">
+
+<h3>Buy new:</h3>
+
+<img src="./assets/circle_icon.png" width="20px">
+
+</div>
+
+
+<h1 class="price">$<span>25.99</span></h1>
+
+
+
+<div class="gap">
+
+<p>
+Get <b>Fast, Free Shipping</b> with
+<span>Amazon Prime</span>
+</p>
+
+<p>
+<span>FREE Returns</span>
+</p>
+
+</div>
+
+
+
+<div class="gap">
+
+<p>
+<span>FREE delivery</span> <b>Saturday</b>,
+</p>
+
+<p>
+<b>January 27</b> on orders shipped by Amazon over $35
+</p>
+
+</div>
+
+
+
+<div class="gap">
+
+<p>
+Or fastest delivery <b>Tomorrow</b>,
+<b>January 23</b>.
+Order within <span>10 hrs 56 mins</span>
+</p>
+
+</div>
+
+
+
+<div class="delivery-location">
+
+<img src="./assets/location_icon_dark.png" width="20px">
+
+<p>
+<span>Deliver to New York 10014</span>
+</p>
+
+</div>
+
+
+
+<h2 class="product-stock">
+In Stock
+</h2>
+
+
+
+<select class="product-quantity">
+
+<option value="1">Quantity: 1</option>
+<option value="2">Quantity: 2</option>
+<option value="3">Quantity: 3</option>
+
+</select>
+
+
+
+<button class="btn">
+Add to Cart
+</button>
+
+<button class="btn product-buy">
+Buy Now
+</button>
+
+
+
+</div>
+
+
+
+</div>
 
 </body>
-
+ <footer>
+        <img src="./assets/amazon_logo.png" width="100" alt="">
+        <p>© 1996-2026, Amazon.com, Inc. or its affiliates</p>
+    </footer>
 </html>
