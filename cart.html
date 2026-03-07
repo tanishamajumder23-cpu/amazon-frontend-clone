@@ -1,11 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cart.css">
+
 </head>
+
 <body>
-    
+
+<!-- ================= NAVBAR ================= -->
+<nav>
+
+<a href="./index.html">
+<img src="./assets/amazon_logo.png" width="100">
+</a>
+
+<div class="nav-location">
+<img src="./assets/location_icon.png" height="18">
+
+<div class="location-text">
+<p>Deliver to Tanisha</p>
+<h1>United Kingdom</h1>
+</div>
+
+</div>
+
+
+<div class="nav-search">
+
+<div class="nav-search-category">
+<p>All</p>
+<img src="./assets/dropdown_icon.png" height="12">
+</div>
+
+<input type="text" placeholder="Search Amazon" class="nav-search-input">
+
+<img src="./assets/search_icon.png" class="nav-search-icon">
+
+</div>
+
+
+<div class="nav-language">
+
+<img src="./assets/us_flag.png" width="25">
+
+<p>EN</p>
+
+<img src="./assets/dropdown_icon.png" width="8">
+
+</div>
+
+
+<div class="nav-text">
+
+<p><a href="/signin.html">Hello, Sign in </a></p>
+
+<h1>Account & Lists</h1>
+
+</div>
+
+
+<div class="nav-text">
+
+<p>Return</p>
+
+<h1>& Orders</h1>
+
+</div>
+
+
+<a class="nav-cart">
+
+<img src="./assets/cart_icon.png" width="35">
+
+<h4>Cart</h4>
+<span class="cart-count">0</span>
+</a>
+
+</nav>
+
+
+<!-- ================= SECOND NAV ================= -->
+
+<div class="nav-bottom">
+
+<div>
+<img src="./assets/menu_icon.png" width="25">
+<p>All</p>
+</div>
+
+<p>Today's Deals</p>
+<p>Customer Service</p>
+<p>Registry</p>
+<p>Gift Cards</p>
+<p>Sell</p>
+
+</div>
+
+
+<!-- ================= CART PAGE ================= -->
+
+<div class="cart">
+
+
+<!-- LEFT SIDE PRODUCT LIST -->
+
+<div class="cart-left">
+
+<h1>Shopping Cart</h1>
+
+<hr>
+
+
+<!-- ================= PRODUCT 1 ================= -->
+
+<div class="product">
+
+<img src="./assets/ipad_img.jpg" class="product-img">
+
+
+<div class="product-info">
+
+<div class="title-price">
+
+<p class="product-title">
+Apple iPad (9th Generation) with A13 Bionic chip, 10.2-inch Retina Display, 64GB
+</p>
+
+<p class="price">$249.00</p>
+
+</div>
+
+
+<!-- BEST SELLER BADGE -->
+
+<div class="badge-row">
+
+<span class="badge">
+#1 Best Seller
+</span>
+
+<span class="category">
+in Computer Tablets
+</span>
+
+</div>
+
+
+<p class="stock">In Stock</p>
+
+<p class="delivery">
+FREE delivery Mon, Jan 29 available at checkout
+</p>
+
+<p class="returns">
+FREE Returns
+</p>
+
+<p class="gift">
+Gift options not available
+</p>
+
+
+<!-- PRODUCT SPECIFICATIONS -->
+
+<div class="specs">
+
+<p>Style: <b>WiFi</b></p>
+
+<p>Size: <b>64GB</b></p>
+
+<p>Color: <b>Space Grey</b></p>
+
+</div>
+
+
+<!-- PRODUCT ACTIONS -->
+
+<div class="actions">
+
+<select>
+<option>Qty: 1</option>
+<option>Qty: 2</option>
+<option>Qty: 3</option>
+</select>
+
+<a>Delete</a>
+
+<a>Save for later</a>
+
+<a>Compare with similar items</a>
+
+<a>Share</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<hr>
+
+
+<!-- ================= PRODUCT 2 ================= -->
+
+<div class="product">
+
+   <img src="./assets/product_img.jpg" width="200"> <!-- Large product image -->
+
+</div>
+<div class="product-info">
+
+<div class="title-price">
+
+<p class="product-title">
+BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One
+</p>
+
+<p class="price">$25.99</p>
+
+</div>
+
+
+<div class="badge-row">
+
+<span class="badge">
+#1 Best Seller
+</span>
+
+<span class="category">
+in PC Game Headsets
+</span>
+
+</div>
+
+
+<p class="stock">In Stock</p>
+
+<p class="delivery">
+FREE delivery Mon, Jan 29 available at checkout
+</p>
+
+<p class="returns">
+FREE Returns
+</p>
+
+<p class="gift">
+Gift options not available
+</p>
+
+
+<div class="specs">
+
+<p>Style: <b>Wired</b></p>
+
+<p>Size: <b>Free</b></p>
+
+<p>Color: <b>Blue</b></p>
+
+</div>
+
+
+<div class="actions">
+
+<select>
+<option>Qty: 1</option>
+<option>Qty: 2</option>
+<option>Qty: 3</option>
+</select>
+
+<a>Delete</a>
+
+<a>Save for later</a>
+
+<a>Compare with similar items</a>
+
+<a>Share</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= RIGHT SIDE SUBTOTAL ================= -->
+
+<div class="cart-right">
+
+<p class="free-ship">
+✔ Your order qualifies for FREE Shipping
+</p>
+
+<h3>
+Subtotal (2 items): <span>$274.99</span>
+</h3>
+
+<button class="checkout-btn">
+Proceed to checkout
+</button>
+
+</div>
+
+
+</div>
+
+
 </body>
+
 </html>

@@ -1,363 +1,264 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Page</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="product.css">
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive layout -->
+
+    <title>Product Page</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Product page styles -->
+    <link rel="stylesheet" href="product.css">
 
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
+
 <nav>
 
-<a href="./index.html">
-<img src="./assets/amazon_logo.png" width="100">
-</a>
+    <!-- Logo redirects to homepage -->
+    <a href="./index.html">
+        <img src="./assets/amazon_logo.png" width="100">
+    </a>
 
-<div class="nav-location">
-<img src="./assets/location_icon.png" height="18">
+    <!-- Delivery location -->
+    <div class="nav-location">
 
-<div class="location-text">
-<p>Deliver to Tanisha</p>
-<h1>United Kingdom</h1>
-</div>
-</div>
+        <img src="./assets/location_icon.png" height="18">
 
-<div class="nav-search">
+        <div class="location-text">
+            <p>Deliver to Tanisha</p>
+            <h1>United Kingdom</h1>
+        </div>
 
-<div class="nav-search-category">
-<p>All</p>
-<img src="./assets/dropdown_icon.png" height="12">
-</div>
+    </div>
 
-<input type="text" class="nav-search-input" placeholder="Search Amazon">
 
-<img src="./assets/search_icon.png" class="nav-search-icon">
+    <!-- Search bar -->
+    <div class="nav-search">
 
-</div>
+        <div class="nav-search-category">
+            <p>All</p>
+            <img src="./assets/dropdown_icon.png" height="12">
+        </div>
 
-<div class="nav-language">
-<img src="./assets/us_flag.png" width="25px">
-<p>EN</p>
-<img src="./assets/dropdown_icon.png" width="8px">
-</div>
+        <input type="text" class="nav-search-input" placeholder="Search Amazon">
 
-<div class="nav-text">
-<p>Hello, Sign in</p>
+        <img src="./assets/search_icon.png" class="nav-search-icon">
 
-<h1>
-Account & Lists
-<img src="./assets/dropdown_icon.png" width="8px">
-</h1>
+    </div>
 
-</div>
 
-<div class="nav-text">
-<p>Return</p>
-<h1>& Orders</h1>
-</div>
+    <!-- Language -->
+    <div class="nav-language">
 
-<a href="" class="nav-cart">
-<img src="./assets/cart_icon.png" width="35px">
-<h4>Cart</h4>
-</a>
+        <img src="./assets/us_flag.png" width="25px">
+        <p>EN</p>
+        <img src="./assets/dropdown_icon.png" width="8px">
+
+    </div>
+
+
+    <!-- Account -->
+    <div class="nav-text">
+
+        <p><a href="signin.html">Hello, Sign in</a></p>
+
+        <h1>
+            Account & Lists
+            <img src="./assets/dropdown_icon.png" width="8px">
+        </h1>
+
+    </div>
+
+
+    <!-- Orders -->
+    <div class="nav-text">
+        <p>Return</p>
+        <h1>& Orders</h1>
+    </div>
+
+
+    <!-- Cart -->
+    <a href="./cart.html" class="nav-cart">
+
+        <img src="./assets/cart_icon.png" width="35px">
+
+        <!-- cart-count will be updated by JS -->
+        <h4>Cart <span class="cart-count">0</span></h4>
+
+    </a>
 
 </nav>
 
 
+<!-- ================= SECOND NAVBAR ================= -->
+
 <div class="nav-bottom">
 
-<div>
-<img src="./assets/menu_icon.png" width="25px">
-<p>All</p>
+    <div>
+        <img src="./assets/menu_icon.png" width="25px">
+        <p>All</p>
+    </div>
+
+    <p>Today's Deals</p>
+    <p>Customer Service</p>
+    <p>Registry</p>
+    <p>Gift Cards</p>
+    <p>Sell</p>
+
 </div>
 
-<p>Today's Deals</p>
-<p>Customer Service</p>
-<p>Registry</p>
-<p>Gift Cards</p>
-<p>Sell</p>
 
-</div>
-
-
+<!-- ================= BREADCRUMB ================= -->
 
 <p class="breadcrum">
-Video Games > PC > Accessories > Headset
+    Video Games > PC > Accessories > Headset
 </p>
 
 
+<!-- ================= PRODUCT DISPLAY ================= -->
 
 <div class="product-display">
 
+    <!-- Product image section -->
+    <div class="product-d-image">
 
-<div class="product-d-image">
+        <!-- Small side images -->
+        <div class="product-icons">
 
-<div class="product-icons">
-<img src="./assets/product_img.jpg" width="60">
-<img src="./assets/product_img.jpg" width="60">
-<img src="./assets/product_img.jpg" width="60">
-<img src="./assets/product_img.jpg" width="60">
-<img src="./assets/product_img.jpg" width="60">
-</div>
+            <img src="./assets/product_img.jpg" width="60">
+            <img src="./assets/product_img.jpg" width="60">
+            <img src="./assets/product_img.jpg" width="60">
+            <img src="./assets/product_img.jpg" width="60">
+            <img src="./assets/product_img.jpg" width="60">
 
-<div class="product-main-image">
-<img src="./assets/product_img.jpg" width="400">
-</div>
+        </div>
 
-</div>
+        <!-- Main image -->
+        <div class="product-main-image">
+            <img src="./assets/product_img.jpg" width="400">
+        </div>
 
-
-
-<div class="product-d-details">
-
-<p class="product-title">
-BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller,
-Noise Cancelling over Ear Headphones with Mic, LED Light,
-Bass Surround, Soft Memory Earmuffs (Blue)
-</p>
-
-<p class="brand-store">
-Visit the BENGOO Store
-</p>
+    </div>
 
 
-<div class="product-rating">
+    <!-- ================= PRODUCT DETAILS ================= -->
 
-<div>
-<div>4.3 <img src="./assets/rating_img.png" height="20px"></div>
-</div>
+    <div class="product-d-details">
 
-<p>104,185 ratings | Search this page</p>
+        <p class="product-title">
 
-</div>
+            BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller,
+            Noise Cancelling over Ear Headphones with Mic, LED Light, Bass Surround,
+            Soft Memory Earmuffs (Blue)
 
-<p><span>#Best Seller</span> in PC Game Headsets</p>
+        </p>
 
-<h5>10K+ bought in past month</h5>
-
-<hr>
-
-
-
-<div class="product-price">
-
-<div>
-<p>-35%</p>
-<h1>$<span>25</span>.99</h1>
-</div>
-
-<h5>List Price: <span>$39.99</span></h5>
-
-<p>Get <b>Fast, Free Shipping</b> with <span>Amazon Prime</span></p>
-
-<p><span>FREE Returns</span></p>
-
-<p><span>Join Prime to buy this item at $22.99</span></p>
-
-<p>
-Available at a lower price from <span>other sellers</span>
-that may not offer free Prime shipping.
-</p>
-
-</div>
+        <p class="brand-store">
+            Visit the BENGOO Store
+        </p>
 
 
+        <!-- Rating -->
+        <div class="product-rating">
 
-<div class="product-color-selection">
+            <div>
 
-<p>Colors Available:</p>
+                <div>
+                    4.3
+                    <img src="./assets/rating_img.png" height="20px">
+                </div>
 
-<div class="product-color-options">
+            </div>
 
-<div class="option">
-<img src="./assets/product_img.jpg" width="30">
-<p>Black</p>
-</div>
+            <p>104,185 ratings | Search this page</p>
 
-<div class="option">
-<img src="./assets/product_img.jpg" width="30">
-<p>Green</p>
-</div>
-
-<div class="option">
-<img src="./assets/product_img.jpg" width="30">
-<p>Pink</p>
-</div>
-
-<div class="option">
-<img src="./assets/product_img.jpg" width="30">
-<p>Blue</p>
-</div>
-
-<div class="option">
-<img src="./assets/product_img.jpg" width="30">
-<p>Red</p>
-</div>
-
-</div>
-
-</div>
+        </div>
 
 
+        <p><span>#Best Seller</span> in PC Game Headsets</p>
 
-<div class="product-info">
+        <h5>10K+ bought in past month</h5>
 
-<p><b>Brand</b></p>
-<p>BENGOO</p>
+        <hr>
 
-<p><b>Model Name</b></p>
-<p>G9000</p>
 
-<p><b>Color</b></p>
-<p>Blue</p>
+        <!-- Price section -->
+        <div class="product-price">
 
-<p><b>Form Factor</b></p>
-<p>Over Ear</p>
+            <div>
 
-<p><b>Connectivity Technology</b></p>
-<p>Wired</p>
+                <p>-35%</p>
+
+                <h1>$<span>25</span>.99</h1>
+
+            </div>
+
+            <h5>List Price: <span>$39.99</span></h5>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PURCHASE BOX ================= -->
+
+    <div class="product-d-purchase">
+
+        <h1 class="price">$<span>25.99</span></h1>
+
+        <h2 class="product-stock">
+            In Stock
+        </h2>
+
+
+        <!-- Quantity -->
+        <select class="product-quantity">
+
+            <option value="1">Quantity: 1</option>
+            <option value="2">Quantity: 2</option>
+            <option value="3">Quantity: 3</option>
+
+        </select>
+
+
+        <!-- IMPORTANT: add-cart class used by JS -->
+        <button class="btn add-cart">
+            Add to Cart
+        </button>
+
+
+        <button class="btn product-buy">
+            Buy Now
+        </button>
+
+    </div>
 
 </div>
 
 
-<hr>
+<!-- ================= FOOTER ================= -->
 
+<footer>
 
-<div class="product-description">
+    <img src="./assets/amazon_logo.png" width="100">
 
-<h1>About this item</h1>
+    <p>
+        © 1996-2026, Amazon.com, Inc. or its affiliates
+    </p>
 
-<ul>
+</footer>
 
-<li>Noise cancelling stereo sound</li>
 
-<li>Clear communication microphone</li>
-
-<li>LED lighting effects</li>
-
-<li>Wide compatibility across consoles</li>
-
-<li>Comfortable memory earmuffs</li>
-
-</ul>
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="product-d-purchase">
-
-<div class="title">
-
-<h3>Buy new:</h3>
-
-<img src="./assets/circle_icon.png" width="20px">
-
-</div>
-
-
-<h1 class="price">$<span>25.99</span></h1>
-
-
-
-<div class="gap">
-
-<p>
-Get <b>Fast, Free Shipping</b> with
-<span>Amazon Prime</span>
-</p>
-
-<p>
-<span>FREE Returns</span>
-</p>
-
-</div>
-
-
-
-<div class="gap">
-
-<p>
-<span>FREE delivery</span> <b>Saturday</b>,
-</p>
-
-<p>
-<b>January 27</b> on orders shipped by Amazon over $35
-</p>
-
-</div>
-
-
-
-<div class="gap">
-
-<p>
-Or fastest delivery <b>Tomorrow</b>,
-<b>January 23</b>.
-Order within <span>10 hrs 56 mins</span>
-</p>
-
-</div>
-
-
-
-<div class="delivery-location">
-
-<img src="./assets/location_icon_dark.png" width="20px">
-
-<p>
-<span>Deliver to New York 10014</span>
-</p>
-
-</div>
-
-
-
-<h2 class="product-stock">
-In Stock
-</h2>
-
-
-
-<select class="product-quantity">
-
-<option value="1">Quantity: 1</option>
-<option value="2">Quantity: 2</option>
-<option value="3">Quantity: 3</option>
-
-</select>
-
-
-
-<button class="btn">
-Add to Cart
-</button>
-
-<button class="btn product-buy">
-Buy Now
-</button>
-
-
-
-</div>
-
-
-
-</div>
+<!-- IMPORTANT: connect JS file -->
+<script src="script.js"></script>
 
 </body>
- <footer>
-        <img src="./assets/amazon_logo.png" width="100" alt="">
-        <p>© 1996-2026, Amazon.com, Inc. or its affiliates</p>
-    </footer>
 </html>

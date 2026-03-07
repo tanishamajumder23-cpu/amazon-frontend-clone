@@ -1,40 +1,56 @@
-const imgs=document.querySelectorAll('.header-slider ul img');//provide the class name, ul and img: sleects all the images under ul, hence this imgs will have an array that stores all the array elements
-const prev_btn=document.querySelector('.control_prev');//stores only 1 element in the previous button
-const next_btn=document.querySelector('.control_next');//stores only 1 element in the next button
+// ================= HEADER SLIDER ================= //
+// This code controls the homepage image slider. 
 
-let n=0;//we are on the first image
+const imgs = document.querySelectorAll('.header-slider ul img');
+const prev_btn = document.querySelector('.control_prev');
+const next_btn = document.querySelector('.control_next');
+let n = 0;
 
-function changeSlide(){
-    for(let i=0;i<imgs.length;i++){
-        imgs[i].style.display='none';
-    }//first selecting all images and then adding the style property none so all images will be hidden
-    imgs[n].style.display='block';//select 1st image,2nd image...nth image
+// Function to show one slide at a time
+function changeSlide() {
+    for (let i = 0; i < imgs.length; i++) {
+        imgs[i].style.display = 'none';
+    }
+    if (imgs[n]) {
+        imgs[n].style.display = 'block';
+    }
 }
-//we have to add js for prev and next button such that it'll decrease and increase the value of n accrodingly
-changeSlide();
 
+// Run slider only if elements exist on the current page
+if (imgs.length > 0 && prev_btn && next_btn) {
+    changeSlide();
+    
+    prev_btn.addEventListener('click', (e) => {
+        e.preventDefault(); // prevents screen from jumping to top
+        if (n > 0) {
+            n--;
+        } else {
+            n = imgs.length - 1;
+        }
+        changeSlide();
+    });
 
-prev_btn.addEventListener('click',(e)=>{
-    if (n > 0){
-        n--;
-    } else {
-        n = imgs.length - 1;
-    }
-    changeSlide();
-});
-next_btn.addEventListener('click',(e)=>{
-    if (n <(imgs.length-1)){
-        n++;
-    } else {
-        n = 0;
-    }
-    changeSlide();
-});
-const scrollContainer= document.querySelectorAll('.products');
-//select all div with this classname "products" where we can scroll the products with mouse
-//for (const item of scrollContainer){
-    //item.addEventListener('wheel',(evt)=>{
-        //evt.preventDefault();
-       // item.scrollLeft+=evt.deltaY;
-    //});
-//}
+    next_btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (n < imgs.length - 1) {
+            n++;
+        } else {
+            n = 0;
+        }
+        changeSlide();
+    });
+}
+
+// ================= ADD TO CART SYSTEM ================= //
+const cartCount = document.querySelector('.cart-count');
+let cartItems = 0;
+const addCartButtons = document.querySelectorAll('.add-cart');
+
+for (let i = 0; i < addCartButtons.length; i++) {
+    addCartButtons[i].addEventListener('click', () => {
+        cartItems++;
+        if (cartCount) {
+            cartCount.innerText = cartItems;
+        }
+    });
+}

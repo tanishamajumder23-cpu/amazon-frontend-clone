@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amazon Sign In</title>
+
+<link rel="stylesheet" href="signin.css">
+
+</head>
+
+<body>
+
+<!-- Amazon Logo -->
+<a href="/">
+<img src="./assets/amazon_logo_dark.png" class="logo" alt="Amazon Logo">
+</a>
+
+<!-- Sign In Card -->
+<div class="signin-container">
+
+<h1 class="signin-title">Sign in or create account</h1>
+
+<form onsubmit="return validateForm()">
+
+<label>Email or mobile phone number</label>
+
+<input type="text" id="email">
+
+<button type="submit">Continue</button>
+
+</form>
+
+<p class="signin-condition">
+By continuing, you agree to Amazon's 
+<a href="#">Conditions of Use</a> and 
+<a href="#">Privacy Notice</a>.
+</p>
+
+<hr>
+
+<p class="business-text"><b>Buying for work?</b></p>
+
+<a class="business-link" href="#">Create a free business account</a>
+
+</div>
+
+
+<script>
+
+function validateForm(){
+
+let email = document.getElementById("email").value;
+
+if(email === ""){
+alert("Please enter email or phone number");
+return false;
+}
+
+return true;
+
+}
+
+</script>
+
+</body>
+</html>
